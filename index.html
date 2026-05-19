@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@</title>
+
+    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/8XlI3tq.png"/>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+
+<body>
+
+  <div class="floating-orbs"></div>
+  <div id="mouse-spotlight"></div>
+  <div id="particles-js"></div>
+
+  <main class="container">
+
+    <!-- PROFILE CARD -->
+    <div class="card">
+
+      <section class="profile">
+
+        <div class="avatar-wrapper">
+          <img src="https://i.imgur.com/tQQyecY.jpeg"
+               class="avatar"
+               alt="Vir's avatar"
+               loading="lazy"/>
+        </div>
+
+        <h1 class="name">Vir</h1>
+
+        <!-- LINKS -->
+        <div class="profile-links">
+
+          <!-- TOP -->
+          <div class="top-links">
+
+            <a href="https://discord.com/users/823914932185202728"
+               target="_blank"
+               class="social-btn horizontal-btn">
+
+              <img src="https://cdn.simpleicons.org/discord"
+                   class="social-icon"
+                   alt="Discord"/>
+
+              <span>Discord</span>
+            </a>
+
+            <a href="https://github.com/Virenvo/"
+               target="_blank"
+               class="social-btn horizontal-btn">
+
+              <img src="https://cdn.simpleicons.org/github"
+                   class="social-icon"
+                   alt="GitHub"/>
+
+              <span>Github</span>
+            </a>
+
+            <a href="https://open.spotify.com/user/mrfpf7omss9rmtuuebmymartk"
+               target="_blank"
+               class="social-btn horizontal-btn">
+
+              <img src="https://cdn.simpleicons.org/spotify"
+                   class="social-icon"
+                   alt="Spotify"/>
+
+              <span>Spotify</span>
+            </a>
+
+          </div>
+
+          <!-- BOTTOM -->
+          <div class="bottom-links">
+
+            <a href="https://www.last.fm/it/user/Virenvo"
+               target="_blank"
+               class="social-btn horizontal-btn">
+
+              <img src="https://cdn.simpleicons.org/lastdotfm"
+                   class="social-icon"
+                   alt="Last.fm"/>
+
+              <span>Last.fm</span>
+            </a>
+
+            <a href="https://steamcommunity.com/id/Virenvo/"
+               target="_blank"
+               class="social-btn horizontal-btn">
+
+              <img src="https://cdn.simpleicons.org/steam"
+                   class="social-icon"
+                   alt="Steam"/>
+
+              <span>Steam</span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- PRESENTATION -->
+    <div class="card">
+
+      <section class="section">
+
+        <h2 class="section-title">PRESENTATION</h2>
+
+
+        <div class="presentation-info">
+          He/Him | ISTP-T | 14
+        </div>
+
+<p class="presentation-text">
+  >_< Hi, I'm Vir.<br>
+  I enjoy coding, music and animanga.<br>
+  I like experimenting with new things<br>
+  and creating random projects :P
+</p>
+
+      </section>
+
+    </div>
+
+    <!-- DISCORD -->
+    <div class="card">
+
+      <section class="section">
+
+        <h2 class="section-title">DISCORD STATUS</h2>
+
+        <div class="discord-widget">
+
+          <img src="https://discord.c99.nl/widget/theme-2/1175907016422719528.png"
+               alt="Discord Status"
+               class="discord-banner-widget"
+               loading="lazy"/>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- SPOTIFY -->
+    <div class="card">
+
+      <section class="section">
+
+        <h2 class="section-title">
+          CURRENTLY PLAYING ON SPOTIFY
+        </h2>
+
+        <div class="spotify-widget">
+
+          <a href="https://open.spotify.com/user/mrfpf7omss9rmtuuebmymartk"
+             target="_blank">
+
+            <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=mrfpf7omss9rmtuuebmymartk&cover_image=true&theme=spotify-embed&show_offline=true&background_color=120000&interchange=false&profanity=false&mode=dark&bar_color=8B0000&bar_color_cover=false"
+                 alt="Spotify Currently Playing"
+                 loading="lazy"/>
+
+          </a>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <script>
+
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 25 },
+
+        color: {
+          value: ["#b57bee", "#d4a8f7", "#9b59d4"]
+        },
+
+        opacity: {
+          value: 0.6,
+          random: true
+        },
+
+        size: {
+          value: 2.2,
+          random: true
+        },
+
+        line_linked: {
+          enable: false
+        },
+
+        move: {
+          enable: true,
+          speed: 1.5,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out"
+        }
+      },
+
+      interactivity: {
+        events: {
+          onhover: { enable: false },
+          onclick: { enable: false }
+        }
+      },
+
+      retina_detect: false
+    });
+
+    const spotlight =
+      document.getElementById("mouse-spotlight");
+
+    let mouseX = 0,
+        mouseY = 0,
+        orbX = 0,
+        orbY = 0;
+
+    document.addEventListener("mousemove", e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animateCursor() {
+
+      orbX += (mouseX - orbX) * 0.55;
+      orbY += (mouseY - orbY) * 0.55;
+
+      spotlight.style.transform =
+        `translate(${orbX - 130}px, ${orbY - 130}px)`;
+
+      requestAnimationFrame(animateCursor);
+    }
+
+    animateCursor();
+
+    const frames =
+      ["@", "@v", "@vi", "@vir", "@vi", "@v", "@"];
+
+    let i = 0;
+
+    setInterval(() => {
+
+      document.title = frames[i];
+
+      i = (i + 1) % frames.length;
+
+    }, 500);
+
+  </script>
+
+  <script src="./oneko.js"></script>
+
+</body>
+</html>
