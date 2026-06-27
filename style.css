@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+:root{
+    /* Main Colors */
+    --sinon-cyan: 188, 150, 255;
+    --sinon-gold: 249, 189, 4;
+    --sinon-gray: 40, 56, 77;
+    --sinon-light-gray: 90, 82, 120;
+    --sinon-dark-gray: 40, 56, 77;
+    --sinon-white: 255, 255, 255;
+    --sinon-dirty-white: 219, 219, 219;
+    --sinon-transparent: rgb(0 0 0 / 0%);
+
+    /* Background */
+    --color-background: 11, 22, 34;
+    --color-foreground: 21, 31, 46;
+
+    /* Images */
+    --sinon-background: url("assets/bg.png");
+    --sinon-banner: url("assets/banner.jpg");
+
+    /* Text */
+    --color-text-lighter: 195, 182, 255;
+
+    /* Icon */
+    --sinon-owner-icon: url("assets/hypesquadbravery.svg");
+}
+/*Scroll bar*/
+::-webkit-scrollbar {
+    width: 3px;
+    background: rgb(var(--sinon-transparent));
+}
+::-webkit-scrollbar-corner {
+    background: rgb(var(--sinon-cyan));
+}
+::-webkit-scrollbar-thumb {
+    width: 3px;
+    background: rgb(var(--sinon-cyan));
+}
+body{
+    background: rgb(var(--color-background)) var(--sinon-background) center/cover fixed;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', Overpass, sans-serif;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+    overflow:hidden;
+}
+.profile{
+    width:fit-content;
+    border-radius:4px;
+    padding:40px;
+    text-align:center;
+    color:rgb(var(--sinon-white));
+    animation:fadeInDown 1s;
+
+    margin:0;
+}
+.header {
+    border-radius: 6px 6px 0 0;
+    height: 120px;
+    z-index: -1;
+    padding: 40px;
+    margin: auto;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 250px #151f2e;
+    position: relative;
+}
+.box{
+    width: inherit;
+    border-radius: 0 0 6px 6px;
+    background: rgb(var(--color-foreground));
+    padding: 40px;
+    padding-bottom: 5px;
+    text-align: center;
+    margin: auto;
+    color: rgb(var(--sinon-white));
+    font-family: 'Poppins', Overpass, sans-serif;
+}
+.hyper {
+    position: absolute;
+    margin-left: -23px;
+    margin-top: -25px;
+    height: 36px;
+}
+.hyper{
+    position:absolute;
+    margin-left:-20px;
+    margin-top:-22px;
+    height:30px;
+}
+.hyper img{
+    width:18px;
+    height:18px;
+    filter:
+        drop-shadow(0 0 5px rgb(188,150,255))
+        drop-shadow(0 0 12px rgb(188,150,255));
+}
+.stray-admin {
+    position: absolute;
+    margin-left: 11px;
+    margin-top: -27px;
+    height: 42px;
+}
+.stray-admin img{
+    filter: drop-shadow(0px 0px 8px rgb(255 192 0));
+}
+.kofi {
+    position: absolute;
+    transform: translate(422px, -13px);
+    filter: hue-rotate(1deg);
+}
+.box-img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -150px;
+    border: 6px solid rgb(var(--sinon-cyan));
+    box-shadow: 0px 0px 20px 10px rgb(21 31 46 / 56%);
+    transition: 0.5s;
+}
+.box h1{
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    font-family: 'Poppins', Overpass, sans-serif; 
+}
+.box h5{
+    color: rgb(var(--color-text-lighter));
+    font-family: 'Poppins', Overpass, sans-serif;
+    font-weight: 600;
+}
+.box p{
+    margin-top: 12px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', Overpass, sans-serif;
+}
+.box .social{
+    display:grid;
+    grid-template-columns:repeat(3, 230px);
+    justify-content:center;
+    gap:14px;
+    padding-top:12px;
+}
+.box .social a{
+    background:rgb(var(--color-background));
+    height:52px;
+    width:230px;
+
+    border-radius:10px;
+    border:3px solid rgb(var(--color-foreground));
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    transition:.25s;
+}
+.box .social a:before{
+    display: block;
+    
+}
+.box .social span {
+    font-size: 1rem;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: rgb(var(--sinon-white));
+}
+.box .social a:hover {
+    background: rgb(var(--color-foreground));
+    border:  3px solid rgba(var(--sinon-cyan));
+    transform: scale(0.95) !important;
+    transition: 0.5s;
+}
+.box-img:hover{
+    transform:translateZ(0) scale(1.08);
+    border-color:rgb(var(--color-background));
+}
+.box .social-title{
+    padding-top: 20px;
+    display: flex;
+}
+.box .playlist-title{
+    padding-top: 10px;
+    display: flex;
+}
+.playlist{
+    font-size:26px;
+    color:rgb(var(--sinon-cyan));
+    min-height:110px;
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    top:0;
+    overflow:hidden;
+    transition:.1s;
+
+    padding:10px 0 15px;
+
+    border-bottom:2px solid rgba(var(--sinon-light-gray),0.2);
+}
+ .playlist a {
+    font-size: 26px;
+    color: rgb(var(--sinon-cyan));
+    background: rgb(var(--color-background));
+    height: 90px;
+    border-radius: 8px;
+    margin: 8px;
+    position: relative;
+    display: flex;
+    top: 0px;
+    line-height: 48px;
+    overflow: hidden;
+    transition: 0.1s;
+    border:  3px solid rgba(var(--color-foreground));
+    margin-bottom: 30px;
+    width:460px;
+}
+.playlist a:hover{
+    background: rgb(var(--color-foreground));
+    border:  3px solid rgba(var(--sinon-cyan));
+    transform: scale(0.95) !important;
+    transition: 0.5s;
+}
+.playlist span {
+    font-size: 1.4rem;
+    text-align: justify;
+    display: absolute;
+    justify-content: center;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: rgb(var(--sinon-white));
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.playlist h5 {
+    font-size: 0.7rem;
+    position: absolute;
+    margin-left: 120px;
+    margin-top: 35px;
+}
+.playlist h5::after{
+    content: '';
+    -webkit-mask: url('https://saikokurami.github.io/assets/spotify_42px.png') no-repeat 50% 50%;
+    width: 30px;
+    height: 30px;
+    left: 260px;
+    top: -26px;
+    position: absolute;
+    background-color: rgb(var(--sinon-cyan));
+}
+.box .counter{
+    display: flex;
+    margin-top: -30px;
+    position: absolute;
+}
+.date {
+    display: flex;
+    font-size: 0.7rem;
+    padding: 7px 0 11px 0;
+    justify-content: flex-end;
+    color: rgb(var(--sinon-light-gray));
+    font-weight: 100;
+}
+/*tool-tip*/
+.stray-admin::before,
+.stray-admin::after,
+.hyper::before,
+.hyper::after{
+    --scale: 0;
+    --arrow-size: 7px;
+    --tooltip-color: rgb(40 54 74);
+    position: absolute;
+    top: -0.25rem;
+    left: 50%;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+.stray-admin::before,
+.hyper::before{
+    --translate-y: calc(-100% - var(--arrow-size));
+    content: attr(data-tooltip);
+    color: white;
+    padding: .5rem;
+    border-radius: .3rem;
+    text-align: center;
+    width: max-content;
+    pointer-events: none;
+    background: var(--tooltip-color);
+    font-size: 0.6rem;
+}
+.stray-admin:hover::before,
+.stray-admin:hover::after,
+.hyper:hover::before,
+.hyper:hover::after{
+    --scale: 1;
+}
+.stray-admin::after,
+.hyper::after{
+    --translate-y: calc(-1 * var(--arrow-size));
+    content: '';
+    border: var(--arrow-size) solid transparent;
+    border-top-color: var(--tooltip-color);
+    transform-origin: top center;
+}
+.box .social a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+}
+.box .social img{
+    width:24px;
+    height:24px;
+    object-fit:contain;
+    flex-shrink:0;
+    filter: brightness(0) saturate(100%) invert(78%) sepia(15%) saturate(1200%) hue-rotate(220deg);
+}
+.box .social span{
+    margin:0;
+}
