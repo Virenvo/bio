@@ -50,7 +50,8 @@ body{
     align-items:center;
 
     min-height:100vh;
-    overflow:hidden;
+    overflow-x:hidden;
+    overflow-y:auto;
 }
 .profile{
     width:fit-content;
@@ -335,4 +336,70 @@ body{
 }
 .box .social span{
     margin:0;
+}
+@media (max-width: 768px){
+
+    .profile{
+        width:100%;
+        max-width:100%;
+        padding:15px;
+    }
+
+    .box{
+        padding:25px 15px;
+    }
+
+    .header{
+        height:90px;
+        padding:25px;
+    }
+
+    .box-img{
+        width:140px;
+        height:140px;
+        margin-top:-100px;
+    }
+
+    .box h1{
+        font-size:30px;
+    }
+
+    .box p{
+        font-size:.9rem;
+    }
+
+    .box .social{
+        grid-template-columns:1fr;
+        gap:10px;
+    }
+
+    .box .social a{
+        width:100%;
+        max-width:100%;
+    }
+
+    .playlist a{
+        width:100%;
+        height:auto;
+        min-height:90px;
+    }
+
+    .playlist span{
+        font-size:1.1rem;
+        margin-left:20px;
+    }
+
+    .playlist h5{
+        position:static;
+        margin:5px 0 10px 110px;
+    }
+
+    .date{
+        justify-content:center;
+    }
+
+    .counter{
+        display:none;
+    }
+
 }
